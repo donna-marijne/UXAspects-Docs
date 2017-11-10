@@ -9,7 +9,7 @@ import { ComponentsHelpCenterNg1Component } from './help-center-ng1/help-center-
 import { WrappersModule } from '../../../../wrappers.module';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ComponentsHelpCenterComponent } from './help-center/help-center.component';
-import { HelpCenterModule, PageHeaderModule } from '../../../../../../src/index';
+import { HelpCenterModule, PageHeaderModule } from '@ux-aspects/ux-aspects';
 
 const SECTIONS = [
     ComponentsHelpCenterNg1Component,

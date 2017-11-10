@@ -3,7 +3,7 @@ import { NgModule, ComponentFactoryResolver } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ButtonsModule, PaginationModule, BsDropdownModule } from 'ngx-bootstrap';
-import { StringFilterModule } from './../../../../../../src/pipes/string-filter/string-filter.module';
+import { StringFilterModule } from '@ux-aspects/ux-aspects';
 import { DocumentationComponentsModule } from '../../../../components/components.module';
 import { ResolverService, DocumentationPage } from '../../../../services/resolver/resolver.service';
 import { DocumentationCategoryComponent } from '../../../../components/documentation-category/documentation-category.component';

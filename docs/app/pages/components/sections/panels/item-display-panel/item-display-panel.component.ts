@@ -1,11 +1,11 @@
-import { ColorService } from './../../../../../../../src/services/color/color.service';
+import { ColorService } from '@ux-aspects/ux-aspects';
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
 import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
 import 'chance';
 import { IPlunk } from '../../../../../interfaces/IPlunk';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
-import { ItemDisplayPanelComponent } from '../../../../../../../src/index';
+import { ItemDisplayPanelComponent } from '@ux-aspects/ux-aspects';
 
 @Component({
     selector: 'uxd-item-display-panel-component',

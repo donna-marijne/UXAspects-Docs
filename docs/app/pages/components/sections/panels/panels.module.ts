@@ -1,5 +1,5 @@
 import { ComponentsItemDisplayPanelInlineComponent } from './item-display-panel-inline/item-display-panel-inline.component';
-import { SparkModule } from './../../../../../../src/components/spark/spark.module';
+import { ItemDisplayPanelModule, SparkModule } from '@ux-aspects/ux-aspects';
 import { NgModule, ComponentFactoryResolver } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DocumentationComponentsModule } from '../../../../components/components.module';
@@ -15,10 +15,9 @@ import { ComponentsItemDisplayPanelComponent } from './item-display-panel/item-d
 import { WrappersModule } from '../../../../wrappers.module';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ComponentsEboxComponent } from './ebox/ebox.component';
-import { EboxModule } from '../../../../../../src/index';
+import { EboxModule } from '@ux-aspects/ux-aspects';
 import { CommonModule } from '@angular/common';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { ItemDisplayPanelModule } from '../../../../../../src/components/item-display-panel/index';
 
 const SECTIONS = [
     ComponentsCollapsiblePanelsNg1Component,

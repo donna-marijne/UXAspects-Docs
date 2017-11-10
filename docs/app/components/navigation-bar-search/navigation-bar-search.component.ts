@@ -7,7 +7,7 @@ import { IDocumentationPage } from '../../interfaces/IDocumentationPage';
 import { ISearchResult } from '../../interfaces/ISearch';
 import { ISection } from '../../interfaces/ISection';
 import { NavigationService } from '../../services/navigation/navigation.service';
-import { PersistentDataService } from '../../../../src/services/persistent-data/persistent-data.service';
+import { PersistentDataService } from '@ux-aspects/ux-aspects';
 import { Version, VersionService } from '../../services/version/version.service';
 import { AppConfiguration } from '../../services/app-configuration/app-configuration.service';
 

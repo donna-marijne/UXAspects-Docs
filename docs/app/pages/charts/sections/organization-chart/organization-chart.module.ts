@@ -8,7 +8,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { WrappersModule } from '../../../../wrappers.module';
 import { DocumentationComponentsModule } from '../../../../components/components.module';
 import { DocumentationCategoryComponent } from '../../../../components/documentation-category/documentation-category.component';
-import { RadioButtonModule } from '../../../../../../src/index';
+import { RadioButtonModule } from '@ux-aspects/ux-aspects';
 
 const SECTIONS = [
     ChartsOrganizationChartNg1Component

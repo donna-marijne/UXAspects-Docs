@@ -1,24 +1,29 @@
 var fs = require('fs');
 var path = require('path');
+var process = require('process');
 var webpack = require('webpack');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const docs = path.join(process.cwd(), 'docs');
+const dist = path.join(process.cwd(), 'dist');
+const configs = path.join(process.cwd(), 'configs');
+
 /*
     Define Compilation Options
 */
-var docsConfig = {
+module.exports = {
 
     entry: {
-        app: path.join(process.cwd(), 'docs', 'main.ts'),
-        vendor: path.join(process.cwd(), 'docs', 'vendor.ts'),
-        polyfills: path.join(process.cwd(), 'docs', 'polyfills.ts')
+        app: path.join(docs, 'main.ts'),
+        vendor: path.join(docs, 'vendor.ts'),
+        polyfills: path.join(docs, 'polyfills.ts')
     },
 
     output: {
-        path: path.join(process.cwd(), 'dist', 'docs'),
+        path: dist,
         filename: '[name].js',
         chunkFilename: 'modules/[id].chunk.js'
     },
@@ -29,7 +34,7 @@ var docsConfig = {
 
     resolveLoader: {
         alias: {
-            "code-snippet-loader": path.join(process.cwd(), 'configs', 'loaders', 'code-snippet-loader.js')
+            "code-snippet-loader": path.join(configs, 'loaders', 'code-snippet-loader.js')
         }
     },
 
@@ -63,12 +68,12 @@ var docsConfig = {
             },
             {
                 test: /\.less$/,
-                include: [path.join(process.cwd(), 'docs', 'app')],
+                include: [path.join(docs, 'app')],
                 use: ['raw-loader', 'less-loader']
             },
             {
                 test: /\.less$/,
-                exclude: [path.join(process.cwd(), 'docs', 'app'), path.join(process.cwd(), 'src', 'components'), path.join(process.cwd(), 'src', 'services')],
+                exclude: [path.join(docs, 'app')],
                 use: ExtractTextPlugin.extract({
                     use: 'css-loader!less-loader'
                 })
@@ -110,34 +115,34 @@ var docsConfig = {
             /*
                 Angular 1 Rules
             */
-            {
-                test: /\.js$/,
-                exclude: [
-                    /node_modules/,
-                    /snippets/,
-                    path.join(process.cwd(), 'src', 'ng1', 'plugins'),
-                    path.join(process.cwd(), 'src', 'ng1', 'external')
-                ],
-                use: {
-                    loader: 'babel-loader',
-                    query: {
-                        cacheDirectory: true,
-                        presets: [
-                            ["es2015", {
-                                "modules": false
-                            }]
-                        ]
-                    }
-                }
-            },
-            {
-                test: /\.js$/,
-                include: [
-                    path.join(process.cwd(), 'src', 'ng1', 'plugins'),
-                    path.join(process.cwd(), 'src', 'ng1', 'external')
-                ],
-                use: 'script-loader'
-            },
+            // {
+            //     test: /\.js$/,
+            //     exclude: [
+            //         /node_modules/,
+            //         /snippets/,
+            //         path.join(process.cwd(), 'src', 'ng1', 'plugins'),
+            //         path.join(process.cwd(), 'src', 'ng1', 'external')
+            //     ],
+            //     use: {
+            //         loader: 'babel-loader',
+            //         query: {
+            //             cacheDirectory: true,
+            //             presets: [
+            //                 ["es2015", {
+            //                     "modules": false
+            //                 }]
+            //             ]
+            //         }
+            //     }
+            // },
+            // {
+            //     test: /\.js$/,
+            //     include: [
+            //         path.join(process.cwd(), 'src', 'ng1', 'plugins'),
+            //         path.join(process.cwd(), 'src', 'ng1', 'external')
+            //     ],
+            //     use: 'script-loader'
+            // },
             {
                 test: /\.html$/,
                 use: "ng-cache-loader?prefix=[dir]/[dir]",
@@ -150,7 +155,7 @@ var docsConfig = {
 
         new webpack.ContextReplacementPlugin(
             /angular(\\|\/)core(\\|\/)@angular/,
-            path.resolve(process.cwd(), 'docs')
+            path.resolve(docs)
         ),
 
         new HtmlWebpackPlugin({
@@ -161,55 +166,44 @@ var docsConfig = {
         new ExtractTextPlugin("styles.css"),
 
         new CopyWebpackPlugin([{
-            from: path.join(process.cwd(), 'docs', 'app', 'assets'),
-            to: path.join(process.cwd(), 'dist', 'docs', 'assets')
+            from: './node_modules/@ux-aspects/ux-aspects/dist',
+            to: path.join(dist, 'assets')
         }]),
 
         new CopyWebpackPlugin([{
-                from: path.join(process.cwd(), 'docs', 'app', 'showcase', 'list_view', 'dist'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'list_view', 'dist')
+            from: path.join(docs, 'app', 'assets'),
+            to: path.join(dist, 'assets')
+        }]),
+
+        new CopyWebpackPlugin([{
+                from: path.join(docs, 'app', 'showcase', 'list_view', 'dist'),
+                to: path.join(dist, 'showcase', 'list_view', 'dist')
             },
             {
-                from: path.join(process.cwd(), 'docs', 'app', 'showcase', 'list_view', 'bower_components'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'list_view', 'bower_components')
-            },
-            {
-                from: path.join(process.cwd(), 'src', 'fonts'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'list_view', 'dist', 'fonts')
+                from: path.join(docs, 'app', 'showcase', 'list_view', 'bower_components'),
+                to: path.join(dist, 'showcase', 'list_view', 'bower_components')
             }
         ]),
 
         new CopyWebpackPlugin([{
-            from: path.join(process.cwd(), 'dist'),
-            to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'list_view', 'dist')
-        }], {
-            ignore: [
-                '/docs'
-            ]
-        }),
+            from: path.join(dist),
+            to: path.join(dist, 'showcase', 'list_view', 'dist')
+        }]),
 
         new CopyWebpackPlugin([{
-                from: path.join(process.cwd(), 'docs', 'app', 'showcase', 'charts', 'dist'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'charts', 'dist')
+                from: path.join(docs, 'app', 'showcase', 'charts', 'dist'),
+                to: path.join(dist, 'showcase', 'charts', 'dist')
             },
             {
-                from: path.join(process.cwd(), 'docs', 'app', 'showcase', 'charts', 'bower_components'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'charts', 'bower_components')
-            },
-            {
-                from: path.join(process.cwd(), 'src', 'fonts'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'charts', 'dist', 'fonts')
+                from: path.join(docs, 'app', 'showcase', 'charts', 'bower_components'),
+                to: path.join(dist, 'showcase', 'charts', 'bower_components')
             }
         ]),
 
         new CopyWebpackPlugin([{
-            from: path.join(process.cwd(), 'dist'),
-            to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'charts', 'dist')
-        }], {
-            ignore: [
-                '/docs'
-            ]
-        }),
+            from: path.join(dist),
+            to: path.join(dist, 'showcase', 'charts', 'dist')
+        }]),
 
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
@@ -229,17 +223,12 @@ var docsConfig = {
 
     devServer: {
         https: {
-            pfx: fs.readFileSync(path.join(process.cwd(), 'configs', 'webpack.docs.dev.pfx'))
+            pfx: fs.readFileSync(path.join(configs, 'webpack.docs.dev.pfx'))
         },
         historyApiFallback: true,
-        stats: {
-            colors: true,
-            reasons: true
-        },
+        stats: 'minimal',
         headers: {
             "Access-Control-Allow-Origin": "*"
         }
     }
 };
-
-module.exports = docsConfig;

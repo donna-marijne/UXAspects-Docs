@@ -1,4 +1,4 @@
-import { ColorService } from './../../../../../../../src/index';
+import { ColorService } from '@ux-aspects/ux-aspects';
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
 

@@ -4,7 +4,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { DocumentationComponentsModule } from '../../../../components/components.module';
 import { ResolverService, DocumentationPage } from '../../../../services/resolver/resolver.service';
 import { DocumentationCategoryComponent } from '../../../../components/documentation-category/documentation-category.component';
-import { CheckboxModule } from '../../../../../../src/index';
+import { CheckboxModule } from '@ux-aspects/ux-aspects';
 import { WrappersModule } from '../../../../wrappers.module';
 
 import { CssFormValidationOnSubmitComponent } from './form-validation-on-submit/form-validation-on-submit.component';

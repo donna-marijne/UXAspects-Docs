@@ -1,4 +1,4 @@
-import { CheckboxModule, InfiniteScrollModule, NumberPickerModule, VirtualScrollModule } from '../../../../../../src/index';
+import { CheckboxModule, InfiniteScrollModule, NumberPickerModule, VirtualScrollModule } from '@ux-aspects/ux-aspects';
 import { DocumentationComponentsModule } from '../../../../components/components.module';
 import {
     DocumentationCategoryComponent

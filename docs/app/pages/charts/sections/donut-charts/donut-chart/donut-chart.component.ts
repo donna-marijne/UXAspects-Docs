@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
-import { ColorService } from '../../../../../../../src/index';
+import { ColorService } from '@ux-aspects/ux-aspects';
 import { IPlunk } from '../../../../../interfaces/IPlunk';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';

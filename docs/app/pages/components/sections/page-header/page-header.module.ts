@@ -6,7 +6,7 @@ import { DocumentationCategoryComponent } from '../../../../components/documenta
 
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ComponentsPageHeaderComponent } from './page-header/page-header.component';
-import { PageHeaderModule } from '../../../../../../src/index';
+import { PageHeaderModule } from '@ux-aspects/ux-aspects';
 
 const SECTIONS = [
   ComponentsPageHeaderComponent

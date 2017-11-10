@@ -2,7 +2,7 @@ import { Component, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
 import { ICodePen } from '../../../../../interfaces/ICodePen';
 import { ICodePenProvider } from '../../../../../interfaces/ICodePenProvider';
-import { ColorService } from '../../../../../../../src/index';
+import { ColorService } from '@ux-aspects/ux-aspects';
 import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
 
 @Component({

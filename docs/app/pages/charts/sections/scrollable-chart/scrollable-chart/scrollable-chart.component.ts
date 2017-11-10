@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
-import { ColorService } from '../../../../../../../src/index';
+import { ColorService } from '@ux-aspects/ux-aspects';
 import { BaseChartDirective } from 'ng2-charts';
 import { Chart } from 'chart.js';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';

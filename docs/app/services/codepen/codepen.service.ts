@@ -156,7 +156,7 @@ export class CodePenService {
     // Stylesheets for CodePen to reference
     codepenStylesheets = [
         'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css',
-        this.codepenAssetsBaseUrl + '/css/ux-aspects.css'
+        this.codepenAssetsBaseUrl + '/styles/ux-aspects.css'
     ];
 
     // Script files for CodePen to reference

@@ -1,4 +1,4 @@
-import { CheckboxModule, RadioButtonModule, SelectModule, NumberPickerModule } from '../../../../../../src/index';
+import { CheckboxModule, RadioButtonModule, SelectModule, NumberPickerModule } from '@ux-aspects/ux-aspects';
 import { DocumentationComponentsModule } from '../../../../components/components.module';
 import {
     DocumentationCategoryComponent

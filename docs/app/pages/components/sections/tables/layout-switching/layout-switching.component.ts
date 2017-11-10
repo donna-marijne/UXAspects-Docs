@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
-import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
-import { LayoutSwitcherItem } from '../../../../../../../src/directives/layout-switcher/index';
 import 'chance';
-import { SliderOptions, SliderType } from '../../../../../../../src/index';
-import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
+
+import { Component } from '@angular/core';
+import { SliderOptions, SliderType } from '@ux-aspects/ux-aspects';
+
+import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
+import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
 import { IPlunk, MAPPINGS } from '../../../../../interfaces/IPlunk';
+import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 
 @Component({
     selector: 'uxd-components-layout-switching',

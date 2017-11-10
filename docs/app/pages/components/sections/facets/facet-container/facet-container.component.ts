@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
-import { Facet } from '../../../../../../../src/index';
+import { Facet } from '@ux-aspects/ux-aspects';
 import 'chance';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 import { IPlunk } from '../../../../../interfaces/IPlunk';

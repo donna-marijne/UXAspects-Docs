@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
-import { Breadcrumb } from '../../../../../../../src/components/breadcrumbs/index';
-import { PageHeaderNavigationItem, PageHeaderIconMenu } from '../../../../../../../src/index';
+import { Breadcrumb } from '@ux-aspects/ux-aspects';
+import { PageHeaderNavigationItem, PageHeaderIconMenu } from '@ux-aspects/ux-aspects';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 import { IPlunk, MAPPINGS } from '../../../../../interfaces/IPlunk';
 import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';

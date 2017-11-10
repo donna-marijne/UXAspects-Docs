@@ -14,7 +14,7 @@ import { WrappersModule } from '../../../../wrappers.module';
 import { ComponentsTreeViewComponent } from './tree-view/tree-view.component';
 
 import { TreeModule } from 'angular-tree-component';
-import { CheckboxModule } from '../../../../../../src/index';
+import { CheckboxModule } from '@ux-aspects/ux-aspects';
 import { TreeViewService } from './tree-view-custom-node/tree-view-custom-node.service';
 import { ComponentsTreeViewCustomNodeComponent } from './tree-view-custom-node/tree-view-custom-node.component';
 

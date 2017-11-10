@@ -1,4 +1,4 @@
-import { FocusIfModule } from './../../../../../../src/directives/focus-if/focus-if.module';
+import { FocusIfModule } from '@ux-aspects/ux-aspects';
 import { NgModule, ComponentFactoryResolver } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DocumentationComponentsModule } from '../../../../components/components.module';

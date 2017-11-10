@@ -1,7 +1,7 @@
 import { MAPPINGS } from './../../../../../interfaces/IPlunk';
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
-import { Filter } from '../../../../../../../src/index';
+import { Filter } from '@ux-aspects/ux-aspects';
 import { IPlunk } from '../../../../../interfaces/IPlunk';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';

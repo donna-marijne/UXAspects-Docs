@@ -8,7 +8,7 @@ import { ComponentsFlippableCardsNg1Component } from './flippable-cards-ng1/flip
 import { WrappersModule } from '../../../../wrappers.module';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ComponentsFlippableCardsComponent } from './flippable-cards/flippable-cards.component';
-import { FlippableCardModule, ColorServiceModule, SparkModule } from '../../../../../../src/index';
+import { FlippableCardModule, ColorServiceModule, SparkModule } from '@ux-aspects/ux-aspects';
 
 const SECTIONS = [
     ComponentsFlippableCardsNg1Component,

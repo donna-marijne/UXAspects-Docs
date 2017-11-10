@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { EboxModule, ScrollIntoViewIfModule, PersistentDataModule } from '../../../src/index';
+import { EboxModule, ScrollIntoViewIfModule, PersistentDataModule } from '@ux-aspects/ux-aspects';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PopoverModule } from 'ngx-bootstrap/popover';

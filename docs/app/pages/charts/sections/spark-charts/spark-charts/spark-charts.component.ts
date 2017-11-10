@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
 import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
-import { ColorService, ColorIdentifier } from '../../../../../../../src/index';
+import { ColorService, ColorIdentifier } from '@ux-aspects/ux-aspects';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 import { IPlunk } from '../../../../../interfaces/IPlunk';
 

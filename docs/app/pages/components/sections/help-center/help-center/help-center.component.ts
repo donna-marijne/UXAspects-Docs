@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
 import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
-import { Breadcrumb, PageHeaderIconMenu, PageHeaderIconMenuDropdownItem, HelpCenterService, HelpCenterItem } from '../../../../../../../src/index';
+import { Breadcrumb, PageHeaderIconMenu, PageHeaderIconMenuDropdownItem, HelpCenterService, HelpCenterItem } from '@ux-aspects/ux-aspects';
 import { Subscription } from 'rxjs/Subscription';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 import { IPlunk, MAPPINGS } from '../../../../../interfaces/IPlunk';

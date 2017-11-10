@@ -1,11 +1,17 @@
-import { FilterAddEvent, FilterRemoveAllEvent, Filter, FilterRemoveEvent } from './../../../../../../../src/components/filters/filter-container.component';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import {
+    ColorService,
+    Filter,
+    FilterAddEvent,
+    FilterEvent,
+    FilterRemoveAllEvent,
+    FilterRemoveEvent,
+} from '@ux-aspects/ux-aspects';
+
+import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
-import { ColorService } from '../../../../../../../src/index';
-import { FilterEvent } from '../../../../../../../src/components/filters/index';
 import { IPlunk } from '../../../../../interfaces/IPlunk';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
-import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
 
 @Component({
     selector: 'uxd-components-filters',

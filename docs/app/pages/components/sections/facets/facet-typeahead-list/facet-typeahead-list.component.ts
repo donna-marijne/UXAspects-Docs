@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
-import { Facet, FacetEvent, FacetSelect, FacetDeselect, FacetDeselectAll } from '../../../../../../../src/index';
+import { Facet, FacetEvent, FacetSelect, FacetDeselect, FacetDeselectAll } from '@ux-aspects/ux-aspects';
 import { IPlunk } from '../../../../../interfaces/IPlunk';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 import { Observable } from 'rxjs/Observable';

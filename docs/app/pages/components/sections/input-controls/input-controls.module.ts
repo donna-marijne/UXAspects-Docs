@@ -7,7 +7,7 @@ import { DocumentationComponentsModule } from '../../../../components/components
 import { ResolverService, DocumentationPage } from '../../../../services/resolver/resolver.service';
 import { DocumentationCategoryComponent } from '../../../../components/documentation-category/documentation-category.component';
 
-import { CheckboxModule, ToggleSwitchModule, RadioButtonModule, ColorServiceModule, SliderModule, TagInputModule, TypeaheadModule, NumberPickerModule } from '../../../../../../src/index';
+import { CheckboxModule, ToggleSwitchModule, RadioButtonModule, ColorServiceModule, SliderModule, TagInputModule, TypeaheadModule, NumberPickerModule } from '@ux-aspects/ux-aspects';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { WrappersModule } from '../../../../wrappers.module';
 

@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ColorService } from '../../../../../../../src/index';
+import { ColorService } from '@ux-aspects/ux-aspects';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
 import { ICodePenProvider } from '../../../../../interfaces/ICodePenProvider';
 import { ICodePen } from '../../../../../interfaces/ICodePen';

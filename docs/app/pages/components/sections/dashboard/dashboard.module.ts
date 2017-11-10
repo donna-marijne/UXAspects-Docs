@@ -5,8 +5,8 @@ import { ResolverService, DocumentationPage } from '../../../../services/resolve
 import { DocumentationCategoryComponent } from '../../../../components/documentation-category/documentation-category.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ComponentsDashboardComponent } from './dashboard/dashboard.component';
-import { DashboardModule } from '../../../../../../src/components/dashboard/index';
-import { SparkModule, ColorServiceModule } from '../../../../../../src/index';
+import { DashboardModule } from '@ux-aspects/ux-aspects';
+import { SparkModule, ColorServiceModule } from '@ux-aspects/ux-aspects';
 import { ChartsModule } from 'ng2-charts';
 import 'chart.js';
 

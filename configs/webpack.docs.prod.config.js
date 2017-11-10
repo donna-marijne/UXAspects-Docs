@@ -1,4 +1,5 @@
 var path = require('path');
+var process = require('process');
 var webpack = require('webpack');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -6,16 +7,20 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
+const docs = path.join(process.cwd(), 'docs');
+const dist = path.join(process.cwd(), 'dist');
+const configs = path.join(process.cwd(), 'configs');
+
 module.exports = {
 
     entry: {
-        app: path.join(process.cwd(), 'docs', 'main.ts'),
-        vendor: path.join(process.cwd(), 'docs', 'vendor.ts'),
-        polyfills: path.join(process.cwd(), 'docs', 'polyfills.ts')
+        app: path.join(docs, 'main.ts'),
+        vendor: path.join(docs, 'vendor.ts'),
+        polyfills: path.join(docs, 'polyfills.ts')
     },
 
     output: {
-        path: path.join(process.cwd(), 'dist', 'docs'),
+        path: path.join(dist, 'docs'),
         filename: '[name].js',
         chunkFilename: 'modules/[id].chunk.js'
     },
@@ -26,7 +31,7 @@ module.exports = {
 
     resolveLoader: {
         alias: {
-            "code-snippet-loader": path.join(process.cwd(), 'configs', 'loaders', 'code-snippet-loader.js')
+            "code-snippet-loader": path.join(configs, 'loaders', 'code-snippet-loader.js')
         }
     },
 
@@ -58,12 +63,12 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                include: [path.join(process.cwd(), 'docs', 'app'), path.join(process.cwd(), 'src', 'components')],
+                include: [path.join(docs, 'app'), path.join(process.cwd(), 'src', 'components')],
                 use: ['to-string-loader', 'css-loader', 'less-loader']
             },
             {
                 test: /\.less$/,
-                exclude: [path.join(process.cwd(), 'docs', 'app'), path.join(process.cwd(), 'src', 'components')],
+                exclude: [path.join(docs, 'app'), path.join(process.cwd(), 'src', 'components')],
                 use: ExtractTextPlugin.extract({
                     use: 'css-loader!less-loader'
                 })
@@ -155,7 +160,7 @@ module.exports = {
 
         new webpack.ContextReplacementPlugin(
             /angular(\\|\/)core(\\|\/)@angular/,
-            path.resolve(process.cwd(), 'docs')
+            path.resolve(docs)
         ),
 
         new HtmlWebpackPlugin({
@@ -174,83 +179,52 @@ module.exports = {
             },
             canPrint: true
         }),
-
+        
         new CopyWebpackPlugin([{
-            from: path.join(process.cwd(), 'docs', 'app', 'assets'),
-            to: path.join(process.cwd(), 'dist', 'docs', 'assets')
+            from: './node_modules/@ux-aspects/ux-aspects/dist',
+            to: path.join(dist, 'assets')
         }]),
 
         new CopyWebpackPlugin([{
-            from: path.join(process.cwd(), 'src', 'fonts'),
-            to: path.join(process.cwd(), 'dist', 'docs', 'assets', 'fonts')
-        }]),
-
-        new CopyWebpackPlugin([{
-            from: path.join(process.cwd(), 'dist', 'bundles', 'ux-aspects.umd.js'),
-            to: path.join(process.cwd(), 'dist', 'docs', 'assets', 'lib', 'index.js')
-        }]),
-
-        new CopyWebpackPlugin([{
-            from: path.join(process.cwd(), 'dist', 'ng1'),
-            to: path.join(process.cwd(), 'dist', 'docs', 'assets', 'ng1')
-        }]),
-
-        new CopyWebpackPlugin([{
-            from: path.join(process.cwd(), 'dist', 'styles'),
-            to: path.join(process.cwd(), 'dist', 'docs', 'assets', 'css')
+            from: path.join(docs, 'app', 'assets'),
+            to: path.join(dist, 'assets')
         }]),
 
         new CopyWebpackPlugin([
             {
-                from: path.join(process.cwd(), 'docs', 'app', 'showcase', 'list_view', 'dist'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'list_view', 'dist')
+                from: path.join(docs, 'app', 'showcase', 'list_view', 'dist'),
+                to: path.join(dist, 'showcase', 'list_view', 'dist')
             },
             {
-                from: path.join(process.cwd(), 'docs', 'app', 'showcase', 'list_view', 'bower_components'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'list_view', 'bower_components')
-            },
-            {
-                from: path.join(process.cwd(), 'src', 'fonts'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'list_view', 'dist', 'fonts')
+                from: path.join(docs, 'app', 'showcase', 'list_view', 'bower_components'),
+                to: path.join(dist, 'showcase', 'list_view', 'bower_components')
             }
         ]),
 
         new CopyWebpackPlugin([
             {
-                from: path.join(process.cwd(), 'dist'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'list_view', 'dist')
-            }
-        ], {
-            ignore: [
-                '/docs'
-            ]
-        }),
-
-        new CopyWebpackPlugin([
-            {
-                from: path.join(process.cwd(), 'docs', 'app', 'showcase', 'charts', 'dist'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'charts', 'dist')
-            },
-            {
-                from: path.join(process.cwd(), 'docs', 'app', 'showcase', 'charts', 'bower_components'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'charts', 'bower_components')
-            },
-            {
-                from: path.join(process.cwd(), 'src', 'fonts'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'charts', 'dist', 'fonts')
+                from: path.join('./node_modules/@ux-aspects/ux-aspects/dist'),
+                to: path.join(dist, 'showcase', 'list_view', 'dist')
             }
         ]),
 
         new CopyWebpackPlugin([
             {
-                from: path.join(process.cwd(), 'dist'),
-                to: path.join(process.cwd(), 'dist', 'docs', 'showcase', 'charts', 'dist')
+                from: path.join(docs, 'app', 'showcase', 'charts', 'dist'),
+                to: path.join(dist, 'showcase', 'charts', 'dist')
+            },
+            {
+                from: path.join(docs, 'app', 'showcase', 'charts', 'bower_components'),
+                to: path.join(dist, 'showcase', 'charts', 'bower_components')
             }
-        ], {
-            ignore: [
-                '/docs'
-            ]
-        }),
+        ]),
+
+        new CopyWebpackPlugin([
+            {
+                from: path.join('./node_modules/@ux-aspects/ux-aspects/dist'),
+                to: path.join(dist, 'showcase', 'charts', 'dist')
+            }
+        ]),
 
         new webpack.optimize.UglifyJsPlugin({
             compress: {
@@ -268,5 +242,7 @@ module.exports = {
                 'ENV': '"production"'
             }
         })
-    ]
+    ],
+
+    stats: 'minimal'
 };

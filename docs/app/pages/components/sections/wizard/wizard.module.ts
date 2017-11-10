@@ -12,7 +12,7 @@ import { ComponentsMarqueeWizardNg1Component } from './marquee-wizard-ng1/marque
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { WrappersModule } from '../../../../wrappers.module';
 import { ComponentsWizardComponent } from './wizard/wizard.component';
-import { WizardModule, RadioButtonModule } from '../../../../../../src/index';
+import { WizardModule, RadioButtonModule } from '@ux-aspects/ux-aspects';
 
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 

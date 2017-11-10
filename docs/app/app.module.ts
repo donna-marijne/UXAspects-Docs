@@ -21,15 +21,14 @@ import {
   ProgressBarModule,
   RadioButtonModule,
   SparkModule,
-  ToggleSwitchModule
-} from '../../src/index';
+  ToggleSwitchModule,
+  PersistentDataService
+} from '@ux-aspects/ux-aspects';
 
 // Import Child Modules
 import { DocumentationComponentsModule } from './components/components.module';
 import { DocumentationDirectivesModule } from './directives/directives.module';
 import { DocumentationProvidersModule } from './services/services.module';
-
-import { PersistentDataService } from './../../src/services/persistent-data/persistent-data.service';
 
 // Import Root Component
 import { AppComponent } from './app.component';

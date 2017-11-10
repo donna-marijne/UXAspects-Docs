@@ -1,8 +1,8 @@
-import { ColumnSortingComponent } from './../../../../../../../src/components/column-sorting/column-sorting.component';
+import { ColumnSortingComponent } from '@ux-aspects/ux-aspects';
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
 import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
-import { ColumnSortingState, ColorService, ColumnSortingOrder } from '../../../../../../../src/index';
+import { ColumnSortingState, ColorService, ColumnSortingOrder } from '@ux-aspects/ux-aspects';
 import { IPlunk } from '../../../../../interfaces/IPlunk';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 import 'chance';

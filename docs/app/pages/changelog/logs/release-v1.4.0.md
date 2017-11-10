@@ -10,7 +10,7 @@ New Features:
 
 <table class="table">
 <tr><th>1.3.6 and earlier</th><th>1.4.0</th></tr>
-<tr><td>@ux-aspects/ux-aspects/dist/less/ux-aspects.less</td><td>@ux-aspects/ux-aspects/less/ux-aspects.less</td></tr>
+<tr><td>@ux-aspects/ux-aspects/dist/less/ux-aspects.less</td><td>@ux-aspects/ux-aspects/dist/lessux-aspects.less</td></tr>
 <tr><td>@ux-aspects/ux-aspects/dist/lib</td><td>@ux-aspects/ux-aspects</td></tr>
 <tr><td>@ux-aspects/ux-aspects/dist/styles/ux-aspects.css</td><td>@ux-aspects/ux-aspects/styles/ux-aspects.css</td></tr>
 <tr><td>@ux-aspects/ux-aspects/dist/styles/ux-aspects.min.css</td><td>@ux-aspects/ux-aspects/styles/ux-aspects.min.css</td></tr>

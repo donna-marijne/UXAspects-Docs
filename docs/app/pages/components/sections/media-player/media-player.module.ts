@@ -6,7 +6,7 @@ import { ResolverService, DocumentationPage } from '../../../../services/resolve
 import { DocumentationCategoryComponent } from '../../../../components/documentation-category/documentation-category.component';
 import { ComponentsMediaPlayerComponent } from './media-player/media-player.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
-import { MediaPlayerModule, RadioButtonModule } from '../../../../../../src/index';
+import { MediaPlayerModule, RadioButtonModule } from '@ux-aspects/ux-aspects';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 const SECTIONS = [

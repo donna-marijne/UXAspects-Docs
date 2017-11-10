@@ -13,14 +13,14 @@ import 'jquery-ui/ui/widgets/sortable';
 import 'bootstrap';
 
 /*
-  Import Angular 1 Components and their dependencies
+  Import AngularJS
 */
 import 'angular';
 
 /*
   Import Angular 1 Components and their dependencies
 */
-import '../src/ng1/ux-aspects-ng1.module';
+import '@ux-aspects/ux-aspects/dist/ng1/ux-aspects-ng1';
 
 /*
     Import Angular Libraries

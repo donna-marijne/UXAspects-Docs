@@ -8,7 +8,7 @@ import { ComponentsProgressBarNg1Component } from './progress-bar-ng1/progress-b
 import { WrappersModule } from '../../../../wrappers.module';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ComponentsProgressBarComponent } from './progress-bar/progress-bar.component';
-import { ProgressBarModule } from '../../../../../../src/index';
+import { ProgressBarModule } from '@ux-aspects/ux-aspects';
 
 const SECTIONS = [
     ComponentsProgressBarNg1Component,

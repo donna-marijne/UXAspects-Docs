@@ -4,7 +4,7 @@ import { BaseDocumentationSection } from '../../../../../components/base-documen
 import 'chance';
 import { IPlunk } from '../../../../../interfaces/IPlunk';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
-import { ItemDisplayPanelComponent } from '../../../../../../../src/index';
+import { ItemDisplayPanelComponent } from '@ux-aspects/ux-aspects';
 
 @Component({
     selector: 'uxd-item-display-panel-inline-component',

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DocumentationSectionComponent } from '../../../../../decorators/documentation-section-component';
-import { DashboardOptions } from '../../../../../../../src/components/dashboard/index';
-import { ColorService } from '../../../../../../../src/index';
+import { DashboardOptions } from '@ux-aspects/ux-aspects';
+import { ColorService } from '@ux-aspects/ux-aspects';
 import { BaseDocumentationSection } from '../../../../../components/base-documentation-section/base-documentation-section';
 import { IPlunkProvider } from '../../../../../interfaces/IPlunkProvider';
 import { IPlunk, MAPPINGS } from '../../../../../interfaces/IPlunk';
